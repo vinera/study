@@ -1,0 +1,21 @@
+body {
+	min-width: 1020px;
+	margin:0;
+	padding:0;
+	font-family:'Arial', sans-serif;
+	font-size: 16px;
+}
+
+.container {
+	width: 1020px;
+	margin: 0 auto;
+
+}
+
+header {
+	padding-top: 35px;
+	padding-bottom: 45px;
+	background-color: #6451d5;
+}
+
+
