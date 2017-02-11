@@ -4,16 +4,17 @@ body {
 	padding:0;
 	font-family:'Tahoma', sans-serif;
 	font-size: 18px;
+	line-height: 24px;
 	color: #555;
 }
 
-h1, h2, .main-menu, .btn {
+h1, h2, h3, .main-menu, .btn {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-weight: bold;
 	color: #000;
 	}
 
-h1, h2 
+h1, h2, h3 
 {
 	margin: 0;
 }	
@@ -38,7 +39,8 @@ h1, h2
 
 }
 
-.header-top::after {
+.header-top::after, .main-footer .container::after,
+.features .container::after, .contacts .container::after {
 	content: "";
 	clear: both;
 	display: table;
@@ -83,6 +85,14 @@ h1, h2
 	text-decoration: none;
 }
 
+.main-menu a:hover {
+	text-decoration: underline;
+}
+
+.main-menu a:active {
+	opacity: 0.3;
+	text-decoration: none;
+}
 
 .promo {
 	width: 430px;
@@ -128,13 +138,27 @@ h1, h2
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
+	cursor: pointer;
 	border: 0;
+	outline: 0;
 }
 
 
-.promo-btn {
+.promo .btn {
 	width: 280px;
+	}
+
+
+.btn-color {
 	background-color: #382d78;
+}
+
+.btn-color:hover {
+	background-color: #32286c;
+}
+
+.btn-color:active {
+ 	color: #8581a1;
 }
 
 
@@ -144,11 +168,6 @@ h1, h2
 	background: #efefef;
 }
 
-.features .container::after {
-	content: "";
-	clear: both;
-	display: table;
-}
 
 .features-item {
 	position: relative;
@@ -167,7 +186,6 @@ h1, h2
 .features-title {
 	font-size: 22px;
 	margin-bottom: 25px;
-	
 }
 
 .features-icon {
@@ -194,48 +212,205 @@ h1, h2
 
 
 .form-study {
-	padding-top: 50px;
+	padding-top: 55px;
 	padding-bottom: 70px;
+	background-color: #fff;
 
 }
 
-.form-study-title {
+.form-study-title, .contacts-title {
 	margin-bottom: 70px;
 	font-size: 45px;
 }
 
 .form-study table {
 	border-collapse: collapse;
-	
+	line-height: 30px;
 }
 
-
-
-
-.form-study thead {
+.form-study th {
+	text-align: left;
+	font-weight: normal;
 	background-color: #efefef;
 }
 
 .form-study td, th {
 	border: 2px solid #ccc;
-	padding: 20px;
-line-height: 25px;
-	
+	padding: 25px;
+	padding-right: 35px;
+	line-height: 25px;
 }
 
 .form-study td:first-child {
-	width: 235px;
+	width: 225px;
 }
 
 .form-study td:nth-child(2) {
-	width: 140px;
+	width: 130px;
 }
 
 .form-study td:first-child, .form-study td:nth-child(2) {
+	line-height: 24px;
 	font-size: 22px;
 	vertical-align: top;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: #000;
+}
+
+.contacts {
+	padding-top: 65px;
+	padding-bottom: 45px;
+	background-color: #efefef;
+}
+
+.contacts-form {
+	float: left;
+	width: 670px;
 
 }
 
+.contacts-instruction {
+	float: right;
+	width: 320px;
+}
+
+.contacts-form table {
+	border-collapse: collapse;
+	border: 0;
+	padding: 0;
+	
+
+}
+
+.contacts td {
+	padding: 0;
+	padding-bottom: 30px;
+}
+
+.contacts td:first-child {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: #000;
+	font-weight: bold;
+	text-align: right;
+	width: 100px;
+	padding-right: 10px;
+	
+}
+
+.contacts td:last-child {
+	width: 515px;
+	
+}
+
+.contacts-form input[type="text"],
+.contacts-form textarea {
+	width: 100%;
+	 -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 15px 27px;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: "Tahoma", sans-serif;
+	outline: 0;
+	border: 2px solid #b2b2b2;
+}
+
+.contacts-form input[type="text"]:hover,
+.contacts-form textarea:hover {
+border: 2px solid #7f7f7f;
+}
+
+.contacts-form input[type="text"]:focus,
+.contacts-form textarea:focus {
+border: 2px solid #6451d5;
+}
+
+
+.contacts-form textarea 
+{
+	min-height: 100px;
+}
+
+.contacts-form input[type="radio"] {
+	margin-left: 20px;
+	margin-right: 30px;
+}
+
+.contacts-form .sex label {
+	margin-right: 40px;
+}
+
+.contacts .btn {
+	width: 100%;
+	height: 70px;
+	}
+
+.contacts-instruction h3 {
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 25px;
+}
+
+.contacts-alert {
+	margin-top: 45px;
+}
+
+.main-footer {
+	padding-top: 70px;
+	padding-bottom: 85px;
+	background-color: #2a2546;
+}
+
+footer .adress {
+	float: left;
+	color: #fff;
+	width: 240px;
+	margin-right: 100px;
+}
+
+.footer-menu {
+	float: left;
+	width: 180px;
+	margin-top: 25px;
+	
+}
+
+.footer-menu:last-child {
+	width: 135px;
+}
+
+footer .logo {
+	margin-bottom: 80px;
+}
+
+.footer-menu ul{
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+.footer-menu li{
+	margin-bottom: 25px;
+}
+
+.footer-menu a {
+	color: #a39ebe;
+	text-decoration: none;
+}
+
+.footer-menu a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.footer-menu a:active {
+	opacity: 0.3;
+	text-decoration: none;
+	}
+
+.footer-menu-title {
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 35px;
+}
